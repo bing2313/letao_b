@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+</head>
+
+<body>
+
+
+    <div id="content">
+
+    </div>
+    <script id="tpl" type="test/templ">
+        <h1>
+            <%= mobile%>
+        </h1>
+        <h1>
+            <%= name%>
+        </h1>
+
+        <%for(var i= 0 ; i<arr.length;i++){%>
+            <p>
+                <%= arr[i]%>
+            </p>
+            <%}%>
+
+    </script>
+    <script>
+        var html = template("tpl", {
+            arr: [1, 2, 3, 4],
+            mobile: "12345",
+            name: "zs"
+        })
+        $("#content").html(html);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.lt-header a {
+    color: #fff;
+}
+
+.getCode {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #006699;
+}
+
+.login-now {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    padding-right: 10px;
+    color: #006699;
+    font-size: 14px;
+}
+
+.active {
+    pointer-events: none;
+}

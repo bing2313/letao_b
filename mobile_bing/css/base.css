@@ -1,0 +1,148 @@
+/* 公共样式 */
+
+body {
+    background-color: #fff;
+}
+
+.mui-content {
+    background-color: #fff;
+}
+
+.lt-header,
+.lt-footer {
+    background-color: #069;
+}
+
+.lt-header h1,
+.lt-header .mui-icon-search,
+.lt-footer a span {
+    color: #fff;
+}
+
+.lt-footer .mui-tab-item.mui-active span {
+    color: darkorange;
+}
+
+.nav-link-pic ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.nav-link-pic ul li {
+    float: left;
+    width: 33.3%;
+}
+
+.nav-link-pic ul li a {
+    width: 100%;
+    float: left;
+}
+
+.nav-link-pic ul li a img {
+    width: 100%;
+    display: block;
+}
+
+.title-pic {
+    padding: 0 10px;
+}
+
+.title-pic img {
+    width: 100%;
+}
+
+.logo-pic {
+    padding: 10px;
+    /* margin: 0; */
+    margin: 10px 10px;
+    box-shadow: 0 1px 5px #ccc;
+}
+
+.logo-pic li {
+    float: left;
+    list-style: none;
+    width: 25%;
+    /* display: block; */
+}
+
+.logo-pic li img {
+    width: 100%;
+    display: block;
+}
+
+.product-img img {
+    padding: 0 10px;
+    width: 100%;
+}
+
+
+/* 生活专区 */
+
+.product-list ul {
+    padding: 10px 5px;
+    margin: 0;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.product-list li {
+    width: 50%;
+    float: left;
+    padding: 5px;
+    list-style: none;
+}
+
+.product-list li a {
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    overflow: hidden;
+    /* box-shadow: 0px 1px 10px #ccc; */
+    box-shadow: 0 1px 10px #ccc;
+}
+
+.product-list li a img {
+    width: 100%;
+    display: block;
+}
+
+.product-list li a .pro-name {
+    padding: 5px 10px;
+    height: 44px;
+    color: #000;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.product-list li a .pro-span {
+    text-align: center;
+    font-size: 14px;
+}
+
+.product-list li a .pro-span span:first-child {
+    padding-right: 4px;
+    color: #f40;
+}
+
+.product-list li a .pro-span span:last-child {
+    padding-left: 4px;
+    color: #777;
+    text-decoration: line-through;
+}
+
+.product-list li a .pro-btn {
+    display: block;
+    margin: 10px auto;
+    font-size: 14px;
+    padding: 2px 5px;
+    background-color: #069;
+    color: #fff;
+    border-radius: 4px;
+}
+
+#refreshContainer {
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    left: 0px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/detail.js"></script>
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav lt-header">
+        <h1 class="mui-title">商品详情</h1>
+    </header>
+
+    <nav class="mui-bar mui-bar-tab footer lt-footer">
+        <a class="mui-tab-item" href="##">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="##">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="##">
+            <span class="mui-icon fa fa-shopping-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="##">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <div class="mui-content">
+        <div id="productDetailBox"></div>
+        <!-- 数量 -->
+        <div class="product-num mui-clearfix">
+            <div class="mui-pull-left">数量：</div>
+            <div class="mui-pull-left selectNum">
+                <span class="mui-pull-left" id="reduce">-</span>
+                <input class="mui-pull-left" id="productNum" value="1" type="text">
+                <span class="mui-pull-left" id="add">+</span>
+            </div>
+            <div class="mui-pull-left" id="proRepertory"></div>
+        </div>
+        <!-- /数量 -->
+        <!-- 加入购物车按钮 -->
+        <div class="product-carts">
+            <a href="cart.html">查看购物车</a>
+            <a id="addCart">加入购物车</a>
+        </div>
+        <!-- /加入购物车按钮 -->
+    </div>
+
+
+
+    <script type="text/template" id="productDetai">
+        <!-- 轮播图 -->
+        <div class="mui-slider">
+            <div class="mui-slider-group">
+                <% for(var i=0;i<pic.length;i++){ %>
+                    <div class="mui-slider-item">
+                        <a href="#"><img src="<%= pic[i].picAddr %>" /></a>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+        <!-- /轮播图 -->
+        <!-- 标题 -->
+        <div class="product-title">
+            <%= proName %>
+        </div>
+        <!-- /标题 -->
+        <!-- 价格 -->
+        <div class="product-price">
+            价格：
+            <span class="now"><%= price %></span>
+            <span class="old"><%= oldPrice %></span>
+        </div>
+        <!-- /价格 -->
+        <!-- 尺码 -->
+        <div class="product-size">
+            尺码：
+            <% var size = size.split("-") %>
+                <% for(var i=size[0];i<=size[1];i++){ %>
+                    <span><%=i %></span>
+                    <%}%>
+        </div>
+        <!-- /尺码 -->
+    </script>
+    <!-- 库存的模板 -->
+    <script type="text/template" id="repertory">
+        剩余
+        <%= num %>件
+    </script>
+</body>
+
+</html>
